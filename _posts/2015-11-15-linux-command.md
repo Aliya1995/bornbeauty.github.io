@@ -94,8 +94,8 @@ description: linux命令随记
 	cd /home/jimbo/bornbeauty.github.io
 	git add -A
 	if [ $1 ]
-	then
-		git commit -m $1
+		then
+			git commit -m $1
 	else
 		git commit -m "changeOradd"
 	fi
