@@ -74,6 +74,33 @@ description: linux命令随记
 	git commit -m $1
 	git push
 
+但是问题又来了～有时候就是懒得不想写了怎么办！
+好吧～判断一下是否为空吧～
+[shell选择语句语法](http://c.biancheng.net/cpp/view/7005.html)
+
+	if [ condition ] //condition和[]必须间隔空格
+    	then
+        	code
+    elif
+    	code
+    else
+    	code
+    fi
+    
+然后的问题怎么判断为空呢？
+[shell怎么判断是否为空](http://w55554.blog.51cto.com/947626/1223870)
+
+	//最后代码变成了这个样子 试了试～ 挺好 开心
+	cd /home/jimbo/bornbeauty.github.io
+	git add -A
+	if [ $1 ]
+	then
+		git commit -m $1
+	else
+		git commit -m "changeOradd"
+	fi
+
+	git push
 
 
 
