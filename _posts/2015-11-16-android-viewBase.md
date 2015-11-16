@@ -24,6 +24,7 @@ View的位置是由四个顶点决定的,分别对应top,left,right和bottom.需
     
 到了android3.0的时候,google又增加了额外的几个参数:x,y,translationX和translationY.
 x,y表示的是左上角点的坐标.translationX和translationY的默认值都是0.
+
 	x = left + translationX;
     y = right + translationY;
     
@@ -147,6 +148,11 @@ ACTION_MOVE:手指在屏幕上移动
 接着,接管目标View的onTouchEvent方法,在待监听View的onTouchEvent()方法中添加如下实现:
 	
     return decevtor.onTouchEvent(event);
+    
+# 3.Scroll
+弹性滑动对象,用于实现控件的弹性滑动.当使用View的scrollTo/scrollBy方法来进行滑动.`scrollTo`是绝对滑动,`scrollBy`是相对当前位置的滑动.
+
+
 
 
 
