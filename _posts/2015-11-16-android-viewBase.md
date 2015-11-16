@@ -69,5 +69,85 @@ ACTION_MOVE:手指在屏幕上移动
     //速度值可能是负的
     int velocityX = (int) tracker.getXVelocity();
     int velocityY = (int) tracker.getYVelocity();
+    
+实际上速度是这样计算的
+
+	速度 = (结束位置 - 开始位置) / 时间;
+
+在不需要的时要clear掉VelocityTracker
+
+	tracker.clear();
+	tracker.recycle();
+
+2.GestureDetector-手势检测
+用于辅助检测用户的单击,滑动,长按,双击等等行为.
+首先,创建一个GestureDetector对象并实现onGestureListener()接口,根据需要还可以onDoubleTapListener()实现双击事件.
+	
+    GestureDetector detector = new GestureDetector(this, new GestureDetector.OnGestureListener() {
+            @Override
+            public boolean onDown(MotionEvent e) {
+                //手指触摸屏幕的瞬间 一个ACTION_DOWN发生
+                return false;
+            }
+
+            @Override
+            public void onShowPress(MotionEvent e) {
+				//手指触摸屏幕 尚未松开 强调的是没有松开或者拖动的事件
+                //有一个ACTION_DOWN触发
+            }
+
+            @Override
+            public boolean onSingleTapUp(MotionEvent e) {
+                //手指触摸后松开 有一个ACTION_UP发生
+                //是单击行为
+                return false;
+            }
+
+            @Override
+            public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+                //手指按下屏幕并且拖动
+                //由一个ACTION_DOWN和多个ACTION_UP触发 是拖动行为
+                return false;
+            }
+
+            @Override
+            public void onLongPress(MotionEvent e) {
+				//用户长时间按住屏幕不放 这是长按事件
+            }
+
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            //按下屏幕 快速滑动 然后又松开
+            //由一个ACTION_DOWN,多个ACTION_MOVE和一个ACTION_UP触发
+            //这是快速滑动行为
+                return false;
+            }
+        });
+              detector.setOnDoubleTapListener(new GestureDetector.OnDoubleTapListener() {
+            @Override
+            public boolean onSingleTapConfirmed(MotionEvent e) {
+            //这是严格的单击行为
+            //若是触发了onSingleTapConfirmed(),则不可能后面还发生单击,这也就是保证了这就单击 不可能是双击中的一次单击
+                return false;
+            }
+
+            @Override
+            public boolean onDoubleTap(MotionEvent e) {
+            //双击 由两次单击事件发生
+                return false;
+            }
+
+            @Override
+            public boolean onDoubleTapEvent(MotionEvent e) {
+            //双击事件发生期间会随着ACTION_DOWN,ACTION_UP,ACTON_MOVE多次调用
+                return false;
+            }
+        });
+
+接着,接管目标View的onTouchEvent方法,在待监听View的onTouchEvent()方法中添加如下实现:
+	
+    return decevtor.onTouchEvent(event);
+
+
 
 
