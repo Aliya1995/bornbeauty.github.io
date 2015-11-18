@@ -27,4 +27,7 @@ description: 有关View事件的分发机制
     //也是在第一个方法中去调用 用来处理拦截下来的事件
     //返回值为真表示改事件已经被处理 否则 没有处理 在同一事件序列中
     //当View无法再次接收到事件
+   	public boolean onTouchEvent(MotionEvent e)
+    
+    
     
