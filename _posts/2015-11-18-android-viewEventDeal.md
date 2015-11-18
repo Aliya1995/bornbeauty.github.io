@@ -37,12 +37,12 @@ description: 有关View事件的分发机制
 可以用一段伪代码来表示一下三者的关系:
 
 	public boolean dispatchTouchEvent(MotionEvent e) {
-    		boolean consume = false;
-        	if (onInterceptTouchEvent(e)) {
-        		consume = onTouchEvent(e);
-       	 	} else {
-        		cnsume = childView.dispathcTouchEvent(e);
-			}
+    	boolean consume = false;
+        if (onInterceptTouchEvent(e)) {
+        	consume = onTouchEvent(e);
+       	 } else {
+        	cnsume = childView.dispathcTouchEvent(e);
+		}
     } 
     
 从上面的代码中我们基本可以总结出这样的结论:
