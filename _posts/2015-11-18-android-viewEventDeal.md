@@ -37,15 +37,42 @@ description: 有关View事件的分发机制
 可以用一段伪代码来表示一下三者的关系:
 
 	public boolean dispatchTouchEvent(MotionEvent e) {
-    	boolean consume = false;
-        if (onInterceptTouchEvent(e)) {
-        	consume = onTouchEvent(e);
-        } else {
-        	cnsume = childView.dispathcTouchEvent(e);
-		}
+    		boolean consume = false;
+        	if (onInterceptTouchEvent(e)) {
+        		consume = onTouchEvent(e);
+       	 	} else {
+        		cnsume = childView.dispathcTouchEvent(e);
+			}
     } 
     
 从上面的代码中我们基本可以总结出这样的结论:
-***对于一个根ViewGroup来说,当接收到一个MotionEvent的时候,首先会调用自己的dispatchTouchEvent,如果这个ViewGroup的onInterceptTouchEvent返回ture,表示他要拦截当前的事件,接着调用onTouchEvent来处理这个事件;反之,onInterceptTouchEvent返回false,则当前事件就会继续传递给他的子元素,接着子元素的dispatchTouchEvent方法就会被调用,如此往复,直至事件被处理.***
+
+***对于一个根ViewGroup来说,当接收到一个MotionEvent的时候:***
+
+- 调用dispatchTouchEvent方法
+	- 调用onInterceptTouchEvent方法
+		- 返回值为true,则表示拦截当前事件,调用onTouchEvent来处理这个事件 
+		- 返回值为false,则当前事件将会被传递给childView,childView继续调用dispatchTouchEvent方法
+
+如此往复,直至事件被处理.
+
+***当一个View需要处理一个事件的时候***
+
+- 如果该View设置了onTouchListener,则会调用onTouch方法
+	- 如果onTouch方法返回false,则去调用onTouchEvent
+		- 如果设置了onClickListener,那么在onTouchEvent方法中将会调用onClick方法
+	- 反之,onTouchEvent则不会被调用
+
+当一个事件产生的时候,它的传递过程遵循这样的过程:Activity->Windows->View;事件总是先传递给Activity,Activity在传递给Windows,Windows在传递给View;如果View将事件处理了,则该事件相应就结束了.否则,事件将一级一级的继续返回,最终会传递给Activity的onTouchEvent处理.
+
+	@Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Toast.makeText(MainActivity.this, event.getAction() + "我是Activity", Toast.LENGTH_SHORT).show();
+        return super.onTouchEvent(event);
+    }
+
+当你没有给任何控件设置相应事件的时候(也就是都会返回false),那么你就回看到Activity的onTouchEvent被调用了.
+
+
 
 
