@@ -71,8 +71,18 @@ description: 有关View事件的分发机制
         return super.onTouchEvent(event);
     }
 
-当你没有给任何控件设置相应事件的时候(也就是都会返回false),那么你就回看到Activity的onTouchEvent被调用了.
+当你没有给任何控件设置相应事件的时候(也就是都会返回false),那么你就会看到Activity的onTouchEvent被调用了.
 
+在[android开发艺术](http://bornbeauty.github.io/2015/11/06/book-list-of-2015.html#Android开发艺术探索)这本书中提到了几个结论:
 
+>1.同一个事件序列是指手指接触屏幕那一刻起,到手指离开屏幕那一刻结束,在这个过程中所有产生的事件都属于这一个事件序列.包括一个ACTION_DOWN,一个ACTION_UP和n个ACTION_MOVE;
+
+>2.某一个View一旦决定拦截事件,那么这一事件序列都只能由它来处理.
+
+这个结论认真想了一下,似乎有点问题;假如这个View我设置了onTouchListener,但是我怡然返回false,这个事件序列仍然会传递给父View,当然了,这个View也只能接收到一个ACTION_DOWN事件,ACTION_UP和ACTION_MOVE不会接收到.假如这个View同时还设置了onClickListener,onTouchEvent返回false的时候事件会交给onTouchEvent处理这个事件,不会在交给父View处理了.这个问题还是需要结合源码来看一下;
+
+>3.某个View一旦开始处理一个事件,如果它不消耗ACTION_DOWN事件,那么同一时间序列也不会交给他来处理了.
+>4.如果View不消耗ACTION_DWON以外的事件,那么这个点击事件就会消失,不会在交还给父View处理.最后会交回activity处理.
+>5.ViewGroup默认不拦截任何事件,他的onInterceptTouch方法默认返回false;View没有onInterceptTouch方法,收到事件他的onTouchEvent事件就会被调用.
 
 
