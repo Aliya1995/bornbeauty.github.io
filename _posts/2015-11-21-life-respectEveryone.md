@@ -1,0 +1,11 @@
+---
+layout: post
+title: 
+category: 生活
+tags: life
+description: 慢慢才知道 否定别人是多么的愚蠢
+
+---
+
+>每每听到和自己不一样的声音的时候 我们总是习惯性的否定
+
