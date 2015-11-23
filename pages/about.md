@@ -110,7 +110,7 @@ permalink: /pages/about.html
 				微博：
 			</td> 
 			<td>
-				<a href="{{ site.author.weibo }}" target="_blank">jimbo&微博</a>
+				<a href="{{ site.author.weibo }}" target="_blank">钟金宝1006</a>
 			</td> 
 		</tr>
 
@@ -119,7 +119,7 @@ permalink: /pages/about.html
 				知乎：
 			</td> 
 			<td>
-				<a href="{{ site.author.zhihu }}" target="_blank">jimbo&知乎</a>
+				<a href="{{ site.author.zhihu }}" target="_blank">钟金宝</a>
 			</td> 
 		</tr>
 	</table>
