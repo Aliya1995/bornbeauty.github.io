@@ -23,7 +23,7 @@ sudo:changehosts.sh 找不到命令
 原来,在Linux下用sudo执行某一命令时,是在原进程(parent process)的基础上fork出来一个子进程(child process),这个子进程是以root权限执行的.然后在子进程中,执行你在sudo后面跟的命令.在子进程中是无法调用涉及到父进程的状态的一些命令的,所以非系统内置命令会被拒绝.这就是为什么会出现command not found的提示.
 原因找到了,但是文中没有给解决办法.
 那我们该怎么办呢?
-我们可以用`sudo su`开启root账号,然后执行完在退出.
+我们可以用`su - root`开启root账号,然后执行完在退出.
 
 ```
 su - root
