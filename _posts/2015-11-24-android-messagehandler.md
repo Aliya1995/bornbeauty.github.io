@@ -1,14 +1,14 @@
-﻿---
+---
 
 layout: post
 title: Android的消息机制
 category: 技术
 tags: android
-description: 关于android的消息循环记住
+description: Android的消息机制是怎样的呢?我们今天一起来看一下
 
 ---
 
->今天学习一下android的消息机制
+>Android的消息机制是怎样的呢?我们今天一起来看一下
 
 参考书籍: [Android开发艺术探索](http://bornbeauty.github.io/2015/11/06/book-list-of-2015.html#Android开发艺术探索)
 
