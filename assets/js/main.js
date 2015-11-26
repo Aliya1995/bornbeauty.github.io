@@ -137,7 +137,7 @@ function pjax_loadChart(){
 				    legend: {
 				        orient : 'vertical',
 				        x : 'left',
-				        data:['java','android','html','css','php','c']
+				        data:['java','android','linux','android studio','c','git']
 				    },
 				    toolbox: {
 				        show : false,
@@ -168,12 +168,12 @@ function pjax_loadChart(){
 				            radius : '55%',
 				            center: ['50%', '60%'],
 				            data:[
-				                {value:70, name:'java'},
-				                {value:100, name:'android'},
-				                {value:20, name:'html'},
-				                {value:20, name:'css'},
-				                {value:20, name:'php'},
-				                {value:20, name:'c'}
+				                {value:50, name:'java'},
+				                {value:80, name:'android'},
+				                {value:40, name:'linux'},
+				                {value:60, name:'android studio'},
+				                {value:50, name:'c'},
+						{value:50, name:'git'}
 				            ]
 				        }
 				    ]
