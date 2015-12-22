@@ -120,17 +120,6 @@ CP命令
 -r  按递归方式保留原目录结构复制文件
 
 
-###### 3.linux下的文件差异比较工具
-
-diffuse
-
-安装方法：
-
-	sudo apt-get install diffuse
-
-
-
-
 
 
 
