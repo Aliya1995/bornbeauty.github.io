@@ -9,6 +9,15 @@ description:
 ---
 
 >upsdnu使用说明
+任何意见以及建议都可以反馈 在博客下面留言即可
+
+>BUG集合：
+1.2016年1月6日16:46:29：(尚未处理)
+java.lang.StringIndexOutOfBoundsException: length=0; regionStart=1; regionLength=-2
+at java.lang.String.startEndAndLength(String.java:504)
+at java.lang.String.substring(String.java:1333)
+at com.jimbo.myapplication.MainActivity.getWifiName(MainActivity.java:315)
+可能是WIFI的名字过长溢出了
 
 # 1. 使用说明
 
