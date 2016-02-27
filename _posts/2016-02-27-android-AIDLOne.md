@@ -1,4 +1,4 @@
-﻿---
+---
 
 layout: post
 title: Android进程间通信机制(一)
