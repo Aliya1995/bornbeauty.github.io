@@ -1,4 +1,4 @@
----
+﻿---
 
 layout: post
 title: 应用安全方案(一)
@@ -7,6 +7,8 @@ tags: android
 description:
 
 ---
+
+>学习一下有关安全的一些东西
 
 # 1.安全问题要解决的四个问题
 

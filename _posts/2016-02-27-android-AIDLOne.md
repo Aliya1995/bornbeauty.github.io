@@ -1,9 +1,4 @@
----
-date: 2016-02-27 14:58
-status: public
-title: 2016-02-27
----
-
+﻿
 ---
 
 layout: post
