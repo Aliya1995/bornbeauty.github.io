@@ -1,11 +1,8 @@
 ﻿---
-
 layout: post
-title: 进程间通信机制IPC(一)
+title: Android进程间通信机制(一)
 category: 技术
-tags: android
-description:  
-
+description: Android进程间通信机制
 ---
 
 > 本片博客让我们一起来学一下android的进程之间的通信机制
