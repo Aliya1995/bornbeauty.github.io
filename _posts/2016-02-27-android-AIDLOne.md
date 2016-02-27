@@ -8,6 +8,7 @@ tags: android
 description: 
 
 ---
+
 >本片博客让我们一起来学一下android的进程之间的通信机制
 
 参考视频：[慕课网-AIDL-小白成长记](http://www.imooc.com/learn/606)
