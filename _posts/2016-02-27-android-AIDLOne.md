@@ -76,7 +76,10 @@ c. 在MainActivity中添加一个启动Service的方法 在安卓5.0后必须通
             Log.d("TestAIDL", "bind失败");
         }
     }
+
 ``` 
+
+
 运行效果图：
 ![](http://7xjtan.com1.z0.glb.clouddn.com/testAIDLResultImage.png)
 学习了简单的怎么使用后 下一篇我们继续深入学习一下
