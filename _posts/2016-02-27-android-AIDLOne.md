@@ -46,6 +46,7 @@ d. 记得在manifest文件中注册Service，并且声明成`android:exported="t
 a. 完成计算界面
 b. 在client端也要编写AIDL文件，且与Server端一致，所以拷贝过去 编译一下
 c. 在MainActivity中添加一个启动Service的方法 在安卓5.0后必须通过显示的方式启动Service；conn是一个ServiceConnection对象，其中有两个回调函数`onServiceConnected`,`onServiceDisconnected`，我们可以在‘onServiceConnected`方法中获取到Server端的Service，然后在条用其中的方法
+
 ``` java
     ServiceConnection conn = new ServiceConnection() {
         @Override
@@ -76,12 +77,13 @@ c. 在MainActivity中添加一个启动Service的方法 在安卓5.0后必须通
             Log.d("TestAIDL", "bind失败");
         }
     }
-
 ``` 
 
 
 运行效果图：
+
 ![](http://7xjtan.com1.z0.glb.clouddn.com/testAIDLResultImage.png)
+
 学习了简单的怎么使用后 下一篇我们继续深入学习一下
 
 参考代码下载 [点这里](http://pan.baidu.com/s/1eRdrMyI)
