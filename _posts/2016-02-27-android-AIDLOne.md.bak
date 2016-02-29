@@ -52,11 +52,8 @@ d. 记得在manifest文件中注册Service，并且声明成`android:exported="t
 这样server就算编写完毕了
 
 2. 编写client端
-
 a. 完成计算界面
-
 b. 在client端也要编写AIDL文件，且与Server端一致，所以拷贝过去 编译一下
-
 c. 在MainActivity中添加一个启动Service的方法 在安卓5.0后必须通过显示的方式启动Service；conn是一个ServiceConnection对象，其中有两个回调函数`onServiceConnected`,`onServiceDisconnected`，我们可以在‘onServiceConnected`方法中获取到Server端的Service，然后在条用其中的方法
 
 ``` java
