@@ -1,4 +1,4 @@
-﻿---
+---
 
 layout: post
 title: Android跨进程通信机制(一)
