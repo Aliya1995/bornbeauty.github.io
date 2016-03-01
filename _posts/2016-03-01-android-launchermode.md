@@ -1,4 +1,4 @@
-﻿---
+---
 
 layout: post
 title: 定义Activity启动模式的两种方式
