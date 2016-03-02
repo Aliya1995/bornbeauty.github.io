@@ -83,8 +83,11 @@ description: 有关View事件的分发机制
 这个结论认真想了一下,似乎有点问题;假如这个View我设置了onTouchListener,但是我怡然返回false,这个事件序列仍然会传递给父View,当然了,这个View也只能接收到一个ACTION_DOWN事件,ACTION_UP和ACTION_MOVE不会接收到.假如这个View同时还设置了onClickListener,onTouchEvent返回false的时候事件会交给onTouchEvent处理这个事件,不会在交给父View处理了.这个问题还是需要结合源码来看一下;
 
 >3.某个View一旦开始处理一个事件,如果它不消耗ACTION_DOWN事件,那么同一时间序列也不会交给他来处理了.
+
 >4.如果View不消耗ACTION_DWON以外的事件,那么这个点击事件就会消失,不会在交还给父View处理.最后会交回activity处理.
+
 >5.ViewGroup默认不拦截任何事件,他的onInterceptTouch方法默认返回false;View没有onInterceptTouch方法,收到事件他的onTouchEvent事件就会被调用.
+
 >6.View的onTouchEvent默认都会消耗时间(返回true),除非他是不可点击的(clickable和龙Clickable同时为false).View的longClickable默认都是false,clickable分情况.
 
 # 2.Activity对事件的分发
