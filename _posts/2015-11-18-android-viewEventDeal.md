@@ -17,7 +17,7 @@ description: 有关View事件的分发机制
 
 # 1.View点击事件的传递规则
 
-首先,用户触摸屏幕的时候系统必须对事件做出相应相应.而这个事件就是产生一个MotionEvent然后按照一定的规则传递给每一个View去进行相应的处理.这就是我们所谓的时间分发了.点击事件的分发主要设计一下几个主要的方法:
+首先,用户触摸屏幕的时候系统必须对事件做出相应反应.而这个事件就是产生一个MotionEvent然后按照一定的规则传递给每一个View去进行相应的处理.这就是我们所谓的时间分发了.点击事件的分发主要设计一下几个主要的方法:
 
 	//用来就行事件的分发.如果有事件传递给当前的View,那么该View一定回去调用这个方法
     //返回值受当前View的onTouchEvent和下级View的dispatchTouchEvent的影响
@@ -31,8 +31,8 @@ description: 有关View事件的分发机制
     
     //也是在第一个方法中去调用 用来处理拦截下来的事件
     //返回值为真表示改事件已经被处理 否则 没有处理 在同一事件序列中
-    //当View无法再次接收到事件
-   	public boolean onTouchEvent(MotionEvent e)
+    //View无法再次接收到事件
+   public boolean onTouchEvent(MotionEvent e)
     
 可以用一段伪代码来表示一下三者的关系:
 
@@ -42,7 +42,8 @@ description: 有关View事件的分发机制
         	consume = onTouchEvent(e);
        	 } else {
         	cnsume = childView.dispathcTouchEvent(e);
-		}
+	}
+	return cosume;
     } 
     
 从上面的代码中我们基本可以总结出这样的结论:
