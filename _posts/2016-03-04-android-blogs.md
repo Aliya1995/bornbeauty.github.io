@@ -34,3 +34,6 @@ description:
 11. [面试技巧](http://blog.sina.com.cn/s/blog_ad991b1601018mjc.html)
 
 12. [RxJava](https://gank.io/post/560e15be2dca930e00da1083)
+
+13. [android技术体系](http://my.oschina.net/beenlee/blog/182866) 
+
