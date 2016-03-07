@@ -40,3 +40,5 @@ description:
 14. [android中Service的使用](http://blog.csdn.net/listening_music/article/details/6927988)
 
 15. [android studio快捷键大全](http://seniorzhai.github.io/2015/02/05/AndroidStudio%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B1%87%E6%80%BB/)
+
+16. [android编码规范](http://www.codeceo.com/article/android-code-style-guide.html)
