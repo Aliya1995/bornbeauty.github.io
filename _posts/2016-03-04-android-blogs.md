@@ -6,7 +6,7 @@ tags: android
 description: 
 ---
 
-> 整理的一些优秀android博客或者学习资源
+> 一些优秀android博客或者学习资源 有时间会分门别类整理一下 现在先收集一下
 
 [安卓学习资源集合](http://www.jianshu.com/p/af2de05aadff)
 面试必看博客
@@ -37,3 +37,6 @@ description:
 
 13. [android技术体系](http://my.oschina.net/beenlee/blog/182866) 
 
+14. [android中Service的使用](http://blog.csdn.net/listening_music/article/details/6927988)
+
+15. [android studio快捷键大全](http://seniorzhai.github.io/2015/02/05/AndroidStudio%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B1%87%E6%80%BB/)
