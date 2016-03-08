@@ -37,6 +37,12 @@ description:
 
 13. [android技术体系](http://my.oschina.net/beenlee/blog/182866) 
 
+14. [牛客面经1](http://www.nowcoder.com/discuss/3043?type=2&order=0&pos=5&page=2) 
+
+15. [牛客面经1](http://www.nowcoder.com/discuss/3066) 
+
+
+
 14. [android中Service的使用](http://blog.csdn.net/listening_music/article/details/6927988)
 
 15. [android studio快捷键大全](http://seniorzhai.github.io/2015/02/05/AndroidStudio%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B1%87%E6%80%BB/)
