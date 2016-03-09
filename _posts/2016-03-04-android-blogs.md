@@ -46,3 +46,6 @@ description:
 17. [牛客面经1](http://www.nowcoder.com/discuss/3043?type=2&order=0&pos=5&page=2) 
 
 18. [牛客面经2](http://www.nowcoder.com/discuss/3066) 
+
+19. [ImageLoader使用详解与源码解析](http://blog.csdn.net/xiaanming/article/details/26810303)
+
