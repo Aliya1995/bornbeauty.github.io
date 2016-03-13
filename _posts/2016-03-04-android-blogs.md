@@ -49,6 +49,7 @@ description:
 
 19. [ImageLoader使用详解与源码解析](http://blog.csdn.net/xiaanming/article/details/26810303)
 
-20. [源码分析](http://a.codekk.com/) 
+20. [Android开源库源码分析](http://a.codekk.com/) 
 
+21. [浅谈Http以及HttpGet和HttpPost](http://blog.csdn.net/gdutliuyun827/article/details/17264259)
 
