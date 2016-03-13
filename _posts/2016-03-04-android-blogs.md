@@ -53,3 +53,6 @@ description:
 
 21. [浅谈Http以及HttpGet和HttpPost](http://blog.csdn.net/gdutliuyun827/article/details/17264259)
 
+22. [牛客左程云-关于面试](http://ncstatic.oss-cn-hangzhou.aliyuncs.com/pdf/%E8%AE%B2%E5%BA%A7ppt.pdf)
+
+
