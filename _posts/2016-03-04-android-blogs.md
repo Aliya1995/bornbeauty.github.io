@@ -57,3 +57,4 @@ description:
 
 23. [Git命令](http://mp.weixin.qq.com/s?__biz=MjM5MTE1NjQzMQ==&mid=402557402&idx=1&sn=237247226ba99c93e0993a35468bb347&scene=20#wechat_redirect)
 
+24. [Context详解](http://www.codeceo.com/article/android-context.html)
