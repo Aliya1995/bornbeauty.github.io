@@ -61,3 +61,4 @@ description:
 
 25. [sublime快捷键](https://segmentfault.com/a/1190000002570753) 
 
+26. [HashMap的实现原理](http://blog.csdn.net/zhangerqing/article/details/8193118)
