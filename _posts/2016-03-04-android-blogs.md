@@ -8,6 +8,8 @@ description:
 
 > 一些优秀android博客或者学习资源 有时间会分门别类整理一下 现在先收集一下
 
+[优秀资源-深入学习android](http://gityuan.com/)
+
 [安卓学习资源集合](http://www.jianshu.com/p/af2de05aadff)
 面试必看博客
 
