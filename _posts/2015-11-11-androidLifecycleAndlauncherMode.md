@@ -1,6 +1,6 @@
 ---
 layout: post
-title: android生命周期和启动模式深入理解
+title: activity生命周期和启动模式深入理解
 category: 技术
 tags: android
 description: double eleven happy to me
