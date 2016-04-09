@@ -47,13 +47,18 @@ $(document).ready(function() {
 	});
 	
 	 $(document).on('pjax:complete', function() {
+				$.getScript("http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", function(){
+						MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+				}); 
+				
 	 	 		$("pre").addClass("prettyprint linenums");
+				
 				prettyPrint();
-				skillbar();
+				
 	 	 		pajx_loadDuoshuo();//pjax加载完成之后调用重载多说函数
 				
 	 	 		$(".pjax_loading").css("display", "none");
- 	 		    pjax_loadChart();
+ 	 		   
 		        $('.bookpiclist .bookpic').hover(
 			                    function() {
 			                        $(this).find('.booklabel').stop().animate({bottom: 0}, 200);
@@ -64,8 +69,8 @@ $(document).ready(function() {
 			                        $(this).find('img').stop().animate({top: 0}, 300);
 			                    }
 			    );
-				
-							  
+				pjax_loadChart();
+				 
 								  
 	  });
 
@@ -90,8 +95,8 @@ $(document).ready(function() {
                     }
       );
 	  
+	
 
-	skillbar();
 });
 		
 function pajx_loadDuoshuo(){   
@@ -188,16 +193,5 @@ function pjax_loadChart(){
 }
 
 
-function skillbar(){
-    $('div.skillbar').each(function() {
-        $(this).find('div.skillbar-bar').width(0);
-    });
 
-    $('div.skillbar').each(function() {
-        $(this).find('div.skillbar-bar').animate({
-            width: $(this).attr('data-percent')
-        }, 2000);
-    });    
-
-}
 
