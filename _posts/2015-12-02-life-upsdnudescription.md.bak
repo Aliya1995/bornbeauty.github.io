@@ -12,10 +12,6 @@ description:
 任何意见以及建议都可以反馈 在博客下面留言即可
 
 >BUG集合：
-2016年3月15日20:58:09
-1. 由于采用thread去请求认证 可能会导致内存泄露问题
-2. 计算绩点操作数据的时候可能导致了精度丢失 
-------------------------------------------------------------------------------------
 1.alpha_2.1 2016年1月6日16:46:29：(尚未处理)
 java.lang.StringIndexOutOfBoundsException: length=0; regionStart=1; regionLength=-2
 at java.lang.String.startEndAndLength(String.java:504)
