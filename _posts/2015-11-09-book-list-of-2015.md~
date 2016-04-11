@@ -1,0 +1,24 @@
+---
+layout: book
+title: 2015阅读书单
+category: 读书
+keywords: 阅读,书单,2015
+books: 
+    - title: Android开发艺术探索
+      status: 在读
+      author: 任玉刚
+      publisher: 电子工业出版社
+      language: 中文
+      link: http://book.douban.com/subject/26599538/
+      cover: http://img3.douban.com/lpic/s28283341.jpg
+      description: Android进阶书籍，会有拨云见日的感觉
+    - title: 阿弥陀佛么么哒
+      status: 在读
+      author: 大冰
+      publisher: 湖南文艺出版社
+      language: 中文
+      link: http://book.douban.com/subject/26575812/
+      cover: http://img3.douban.com/lpic/s28259771.jpg
+      description: 愿你我既可朝九晚五 又可浪迹天涯
+
+---
