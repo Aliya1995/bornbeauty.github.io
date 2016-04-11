@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-﻿---
-=======
----
->>>>>>> f5a822ec73730f091841ed11ee495c49093b1693
 
+---
 layout: post
 title: 二叉树的分层遍历
 category: 算法
 tags: 算法
 description: 
-
 ---
 
 > 二叉树的分层遍历
