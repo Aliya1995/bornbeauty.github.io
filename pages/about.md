@@ -11,7 +11,7 @@ permalink: /pages/about.html
 	<br>
 	<p>
 	博客用<a href="http://jekyllrb.com/"><code>jekyll</code></a>（可将纯文本转化为静态网站和博客的语言）,<code>html</code>,<code>css</code>等构建。博客部署在<code>github</code>服务器上，前端采用<code>bootstrap</code>栅格式布局，可自适应移动端浏览器。
-	写博客的目的很单纯，就是记笔记，方便在不同终端上随时查看，偶尔也会记录身边发生的事情。
+	写博客的目的很单纯，就是记笔记，方便在不同终端上随时查看，偶尔也会记录身边发生的事情。若想使用该模板搭建博客可以fork<a href="https://github.com/bornbeauty/bornbeauty.github.io">这个项目~</a>
 	</p>
 	<br>
 	
@@ -63,7 +63,7 @@ permalink: /pages/about.html
 	<table class="table table-striped">
 		<tr>
 			<td>姓  名：</td>    
-			<td>钟金宝 （1994）</td>
+			<td>钟金宝</td>
 		</tr>
 		<tr>
 			<td>学  历：</td>    
