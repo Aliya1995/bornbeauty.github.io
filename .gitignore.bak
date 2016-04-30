@@ -64,3 +64,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 >>>>>>> origin/master
+<<<<<<< HEAD
+=======
+
+
+
+# my file that i wanna to ignore
+2016-03-04-android-blogs.md
+>>>>>>> 5fb579227dfc24a9c0d535b832dde76fd6e96d72
